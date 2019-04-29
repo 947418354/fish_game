@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*1:body加内补丁*/
+    body{padding-top: 10px;}
+    /*2:最外层父元素宽和水平居中*/
+    .all_bg{
+      width:800px;
+      height:600px;
+      margin: 0 auto;
+      border:1px solid red;
+    }
+    /*3:画布父元素 相对定位*/
+    #allcanvas{
+       position: relative;
+       width:800px;
+       height:600px;
+       margin:0;
+    }
+    /*4:画布一 绝对定位*/
+    #can1{
+      position: absolute;
+      width: 800px;
+      height:600px;
+      left:0;
+      bottom:0;
+      z-index:1;
+    }
+    /*5:画布二 绝对定位*/
+    #can2{
+      position: absolute;
+      width:800px;
+      height:600px;
+      left:0;
+      bottom:0;
+      z-index:0;
+    }
+  </style>
+</head>
+<body>
+  <!--创建父元素,游戏中所有内容在此-->
+  <div class="all_bg">
+   <!--画布容器-->
+    <div id="allcanvas">
+      <!--画布1 前大鱼 小鱼 分数..-->
+      <canvas id="can1" width="800" height="600"></canvas>
+      <!--画布2 后 背景 海葵 食物-->
+      <canvas id="can2" width="800" height="600"></canvas>
+    </div>
+  </div>
+  <script src="js/commonFunctions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/background.js"></script>
+  <!--script src="js/ane.js"></script-->
+  <script src="js/ane2.js"></script>
+  <!--script src="js/fruit.js"></script-->
+  <script src="js/fruit2.js"></script>
+  <script src="js/mom.js"></script>
+  <script src="js/collsion.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/baby.js"></script>
+  <script src="js/bigfish.js"></script>
+  <script>
+    //function rn(){
+      //setTimeout(rn,50);
+      //requestAnimFrame(gameloop);
+      //console.log(123);
+    //}
+    //rn();
+  </script>
+</body>
+</html>
